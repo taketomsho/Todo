@@ -8,14 +8,14 @@ let db = new sqlite3.Database('./db/task.db', (err) => {
   console.log('Connected to the filelist database.');
 });
 
-// db.serialize(() => {
-//     db.each(`SELECT * FROM tasks`, (err, row) => {
-//       if (err) {
-//         console.error(err.message);
-//       }
-//       console.log(row.task_id + "\t" + row.title + "\t" + row.content);
-//     });
-// });
+db.serialize(() => {
+    db.each(`SELECT * FROM tasks`, (err, row) => {
+      if (err) {
+        console.error(err.message);
+      }
+      console.log(row.task_id + "\t" + row.title + "\t" + row.content);
+    });
+});
 
 // close the database connection
 db.close((err) => {
