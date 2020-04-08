@@ -1,0 +1,24 @@
+{
+  "name": "todo",
+  "version": "1.0.0",
+  "description": "make todo application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taketomsho/Todo.git"
+  },
+  "author": "shotaro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/taketomsho/Todo/issues"
+  },
+  "homepage": "https://github.com/taketomsho/Todo#readme",
+  "dependencies": {
+    "ejs": "^3.0.2",
+    "sqlite3": "^4.1.1"
+  }
+}
