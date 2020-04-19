@@ -3,16 +3,26 @@
     <head>
         <title>BBS</title>
         <meta charset="utf-8">
+        <link rel="stylesheet" href="/css/bootstrap-reboot.css">
     </head>
     <body>
         <form method="post">
-            <input type="text" name="name">
+            <input type="text" name="title">
+            <input type="text" name="content">
             <input type="submit" value="post!">
         </form>
-        <ul>
+        <table>
+            <tr>
+              <th>題名</th>
+              <th>内容</th>
+            </tr>
             <% for (var i=0;i < posts.length;i++) { %>
-            <li><%= posts[i] %></li>
+              <tr>
+                <td><%= posts[i].title %></td>
+                <td><%= posts[i].content %></td>
+              </tr>
             <% }%>
-        </ul>
+        </table>
+        
     </body>
 </html>

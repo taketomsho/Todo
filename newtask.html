@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <title>BBS</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="/css/bootstrap.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Add new task</h1>
+            <form method="post">
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" class="form-control" name="title" id="first">
+                </div>
+                <div class="form-group">
+                    <label for="content">Description</label>
+                    <textarea type="input" class="form-control" name="content" rows="10"></textarea>
+                </div>
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">Add</button>
+            </form>
+            <hr class="mb-4">
+            <div class="text-right">
+                <a class="btn btn-primary" href="/" role="button">View all tasks</a>
+            </div>
+        </div>
+        <script type="text/javascript">
+            // 上記の入力欄にフォーカスを与える
+            document.getElementById('first').focus();
+        </script>
+    </body>
+</html>
